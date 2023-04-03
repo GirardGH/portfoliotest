@@ -16,10 +16,6 @@ const Hero = styled.div`
 height : 100vh;
 background-color : red;
 `
-const Hero = styled.div`
-height : 100vh;
-background-color : red;
-`
 
 function App() {
 
