@@ -6,16 +6,15 @@ import styled from "styled-components"
 
 const Container = styled.div`
 height : 100vh;
-background-color : yellow;
+scroll-snap-type: y mandatory;
+scroll-behavior: smooth;
+overflow-y: auto;
+scrollbar-width: none;
+&::-webkit-scrollbar {
+  display : none;
+}
 `
-const Hero = styled.div`
-height : 100vh;
-background-color : red;
-`
-const Hero = styled.div`
-height : 100vh;
-background-color : red;
-`
+
 
 function App() {
 
