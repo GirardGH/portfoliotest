@@ -8,9 +8,10 @@ const Container = styled.div`
 height : 100vh;
 scroll-snap-type: y mandatory;
 scroll-behavior: smooth;
-color : white;
 overflow-y: auto;
 scrollbar-width: none;
+color : white;
+background: url("https://res.cloudinary.com/db2sa2bxv/image/upload/v1680772642/bg_omdxaq.jpg");
 &::-webkit-scrollbar {
   display : none;
 }
