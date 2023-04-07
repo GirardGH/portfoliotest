@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import Map from './Map';
 
+
 const Section = styled.div`
 height : 100vh;
 scroll-snap-align : center;
@@ -73,7 +74,7 @@ const [success, setSuccess] = useState(null);
 const handleSubmit = (e) => {
   e.preventDefault();
 
-  emailjs.sendForm('service_hrzln0c', 'template_v1t73dt', ref.current, 'oikGP7dXJwuBNoKjT')
+  emailjs.sendForm(`${import.meta.env.EMAIL_KEY}`, `${import.meta.env.TEMPLATE_ID}`, ref.current, `${import.meta.env.API_KEY}`)
   .then((result) => {
       console.log(result.text);
       setSuccess(true);
