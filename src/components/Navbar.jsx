@@ -7,6 +7,7 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
+    width: 1400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,18 +16,17 @@ const Container = styled.div`
 const Links = styled.div`
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 50px;
 
 `;
 
-
 const Logo = styled.img`
-    height: 3rem;
+    height: 50px;
 `;
 
 const List = styled.ul`
     display: flex;
-    gap: 2rem;
+    gap: 20px;
     list-style: none;
 
 `;
@@ -38,15 +38,21 @@ const ListItem = styled.li`
 const Icons = styled.div`
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 20px;
 `;
 
 const Icon = styled.img`
-    width: 1.5rem;
+    width: 20px;
     cursor: pointer;
 `;
 const Button = styled.button`
-
+width: 100px;
+padding: 10px;
+background-color: #da4ea2;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
 `;
 
 const Navbar = () => {
