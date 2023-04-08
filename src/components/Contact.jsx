@@ -74,7 +74,7 @@ const [success, setSuccess] = useState(null);
 const handleSubmit = (e) => {
   e.preventDefault();
 
-  emailjs.sendForm(`${import.meta.env.EMAIL_KEY}`, `${import.meta.env.TEMPLATE_ID}`, ref.current, `${import.meta.env.API_KEY}`)
+  emailjs.sendForm(`${import.meta.env.VITE_SERVICE_ID}`, `${import.meta.env.VITE_TEMPLATE_ID}`, ref.current, `${import.meta.env.VITE_PUBLIC_KEY}`)
   .then((result) => {
       console.log(result.text);
       setSuccess(true);
