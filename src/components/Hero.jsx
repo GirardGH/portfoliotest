@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Navbar from './Navbar'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei'
+
 
 const Section = styled.div`
 height : 100vh;
@@ -69,8 +72,8 @@ const Right = styled.div`
 `;
 
 const Img = styled.img`
-  width: 800px
-  height: 800px;
+  width: 600px;
+  height: 600px;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -99,19 +102,31 @@ const Hero = () => {
         <Left>
           <Title>Think, bla bla bla</Title>
           <WhatWeDo>
-            <Line src="https://raw.githubusercontent.com/safak/youtube23/3d-portfolio/public/img/line.png"/>
+            <Line src="https://raw.githubusercontent.com/safak/youtube23/3d-portfolio/public/img/line.png" />
             <Subtitle>What we Do</Subtitle>
           </WhatWeDo>
           <Desc>we enjoy the description</Desc>
           <Button>Learn more</Button>
         </Left>
         <Right>
-        {/* 3d model */}
-          <Img src = "https://raw.githubusercontent.com/safak/youtube23/3d-portfolio/public/img/moon.png"/>
+          <Canvas>
+            <OrbitControls enableZoom={false} />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3, 2, 1]} />
+            <Sphere args={[1, 100, 200]} scale={2.4}>
+            <MeshDistortMaterial 
+              color="#3d1c56" 
+              attach="material" 
+              distort={0.5} 
+              speed={2}
+              />
+            </Sphere>
+          </Canvas>
+          <Img src="https://raw.githubusercontent.com/safak/youtube23/3d-portfolio/public/img/moon.png" />
         </Right>
       </Container>
     </Section>
-  )
+  );
 }
 
 export default Hero

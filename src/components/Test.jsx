@@ -1,8 +1,8 @@
 import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
+import Cube from './Cube'
 import React from 'react'
 import styled from 'styled-components'
-import Cube from './Cube'
 
 
 const Container = styled.div`
