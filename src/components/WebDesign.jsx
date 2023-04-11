@@ -1,8 +1,14 @@
+import { OrbitControls } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
 import React from 'react'
+import Chair from './Chair'
 
 const WebDesign = () => {
   return (
-    <div>WebDesign</div>
+    <Canvas>
+      <Chair />
+      <OrbitControls enableZoom={false} />
+    </Canvas>
   )
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import ProductDesign from './ProductDesign';
 import Development from './Development';
@@ -78,6 +78,12 @@ const Right = styled.div`
 const Works = () => {
 
   const [work, setWork] = useState("Web Design");
+  
+  // useEffect(() => {
+  //   setWork(work)
+  // }, [work])
+
+  {console.log(work)}
   return (
     <Section>
       <Container>
